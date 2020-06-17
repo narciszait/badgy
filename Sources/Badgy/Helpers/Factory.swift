@@ -80,6 +80,7 @@ struct Factory {
             
             try Task.run(
                 "convert", baseIcon,
+				"-background", "#4C967E",
                 "-resize", "1024x",
                 finalFilename
             )

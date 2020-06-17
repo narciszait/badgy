@@ -17,8 +17,8 @@ final class Long: DependencyManager, Command, IconSetDelegate {
     
     // --------------
     // MARK: Configuration Properties
-    @Param(validation: Validation<String>.custom("Label should contain maximum 4 characters") {
-     (input) in return input.count <= 4
+    @Param(validation: Validation<String>.custom("Label should contain maximum 10 characters") {
+     (input) in return input.count <= 10
     })
     var labelText: String
     
