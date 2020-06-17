@@ -85,11 +85,12 @@ Usage: badgy small <char> <icon> [options]
 Add small square label to app icon
 
 Options:
-  -h, --help                Show help information
-  -p, --position <value>    Position on which to place the badge
-  -r, --replace             Indicates Badgy should replace the input icon
-                            Only works if input is of format .appiconasset
-  -v, --verbose             Log tech details for nerds
+  -c, --color <value>         Specify badge color with a hexadecimal color code
+  -h, --help                  Show help information
+  -p, --position <value>      Position on which to place the badge
+  -r, --replace               Indicates Badgy should replace the input icon
+  -t, --tint-color <value>    Specify badge text/tint color with a hexadecimal color code
+  -v, --verbose               Log tech details for nerds
 ```
 
 #### Example
@@ -110,12 +111,13 @@ Usage: badgy long <labelText> <icon> [options]
 Add rectangular label to app icon
 
 Options:
-  -a, --angle <value>       Rotation angle of the badge
-  -h, --help                Show help information
-  -p, --position <value>    Position on which to place the badge
-  -r, --replace             Indicates Badgy should replace the input icon
-                            Only works if input is of format .appiconasset
-  -v, --verbose             Log tech details for nerds
+  -a, --angle <value>         Rotation angle of the badge
+  -c, --color <value>         Specify badge color with a hexadecimal color code
+  -h, --help                  Show help information
+  -p, --position <value>      Position on which to place the badge
+  -r, --replace               Indicates Badgy should replace the input icon
+  -t, --tint-color <value>    Specify badge text/tint color with a hexadecimal color code
+  -v, --verbose               Log tech details for nerds
 ```
 
 #### Example
@@ -125,6 +127,21 @@ badgy long BETA ~/MyIcon.png --angle 15 --position bottom
 <p align="center">
 <img src="Assets/beta_long_sample.png" title="badgy long">
 </p>
+
+### Choose your colors
+
+You can change the badge color and the tint/text color with `-c, --color` and `-t, -tint-color`.
+If not specified, as in the examples above, the badge color is randomly selected while the tint color is always white.
+
+#### Example
+```sh
+badgy long TEST ~/MyIcon.png --angle 15 --position bottom --color '#FFD700' --tint-color '#8B7500'
+```
+<p align="center">
+<img src="Assets/test_long_sample.png" title="badgy long color">
+</p>
+
+If a human readable color format is your dub, then check out a full list of [supported named colors](https://imagemagick.org/script/color.php#color_names).
 
 ### Replace your icon directly
 
